@@ -5,27 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function getComputerChoice() {
-            var choices = ['Rock', 'Paper', 'Scissors'];
-            var number = choices[Math.floor(Math.random() * choices.length)];
-            return number
-        }
-
-        let playerSelection = getComputerChoice()
-        console.log(playerSelection)
-
-        let computerSelection = getComputerChoice()
-        console.log(computerSelection)
-
-        function playRound(playerSelection, computerSelection) {
-        }
-        
-    </script>
+    
 </head>
 <body>
-    <button id="button" onclick="playRound()">
-        click here
-    </button>
+    <input type="button" id="rock" value="Rock" onclick="playerSelection()"></input>
+    <input type="button" id="paper" value="Paper" onclick="playerSelection()"></input>
+    <input type="button" id="scissors" value="Scissors" onclick="playerSelection()"></input>
 </body>
+<script>
+    function getComputerChoice() {
+        var choices = ['Rock', 'Paper', 'Scissors'];
+        var result = choices[Math.floor(Math.random() * choices.length)];
+        return result
+    }
+
+    function playerSelection() {
+        if (document.getElementById("rock").value = "Rock"){
+            return selectionRock
+        }
+        var selectionRock = document.getElementById("rock").value = "Rock";
+        var selectionPaper = document.getElementById("paper").value = "Paper";
+        var selectionScissors = document.getElementById("scissors").value = "Scissors";
+        console.log(selection);
+        return selection;
+    }
+    let cpuSelection = getComputerChoice()
+    
+    function playGame(playerSelection, cpuSelection) {
+        if (playerSelection === cpuSelection) {
+            return "Tie Game!"
+        }
+        console.log(cpuSelection)
+    }
+
+</script>
 </html>
